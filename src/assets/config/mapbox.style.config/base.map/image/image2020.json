@@ -1,0 +1,23 @@
+{
+  "version": 8,
+  "name": "test",
+  "sources": {
+    "image2020":{
+      "type": "raster",
+      "tiles": [
+      "http://192.168.2.138:6080/arcgis/rest/services/FHGX/FHGX_IMAGE_2020/MapServer/tile/{z}/{y}/{x}"
+      ],
+       "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "id": "image2020",
+      "type": "raster",
+      "source": "image2020",
+      "layout": {},
+      "paint": {
+      }
+    }
+  ]
+}

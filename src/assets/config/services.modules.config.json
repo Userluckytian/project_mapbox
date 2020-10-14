@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "code": 200,
+    "msg": "操作成功"
+  },
+  "data": [
+    {
+      "module": "login",
+      "url": "./assets/config/services/login.modules.json"
+    },
+    {
+      "module": "common",
+      "url": "./assets/config/services/tool.config.json"
+    },
+    {
+      "module": "mapboxmap",
+      "url": "./assets/config/services/mapbox.service.config.json"
+    },
+    {
+      "module": "cf",
+      "url": "./assets/config/services/cf.config.json"
+    },
+    {
+      "module": "home",
+      "url": "./assets/config/services/home.config.json"
+    },
+    {
+      "module": "menu",
+      "url": "./assets/config/services/slide.menu.config.json"
+    },
+    {
+      "module": "overview",
+      "url": "./assets/config/services/overview.config.json"
+    },
+    {
+      "module": "cctvread",
+      "url": "./assets/config/services/cctvread.config.json"
+    },
+    {
+      "module": "pipequery",
+      "url": "./assets/config/services/pipequery.config.json"
+    },
+    {
+      "module": "pipestatist",
+      "url": "./assets/config/services/pipe.statis.config.json"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "code": 200,
+    "msg": "操作成功"
+  },
+  "data": [
+    {
+      "id": "location.list",
+      "des": "路段列表",
+      "url": "./assets/config/mock/label.line.json",
+      "queryParams": []
+    }
+  ]
+}

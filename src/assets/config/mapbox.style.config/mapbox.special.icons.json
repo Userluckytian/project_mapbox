@@ -1,0 +1,37 @@
+[
+  {
+    "id": "benzhan_default",
+    "name": "泵站",
+    "url": "./assets/img/map/bengzhan.png"
+  },
+  {
+    "id": "benzhan_select",
+    "name": "泵站",
+    "url": "./assets/img/map/bengzhan1.png"
+  },
+  {
+    "id": "cctv-icon",
+    "name": "小区",
+    "url": "./assets/img/icon/cctv.png"
+  },
+  {
+    "id": "ef0",
+    "name": "安全岛",
+    "url": "./assets/img/toolbar/maptool_map_select.png"
+  },
+  {
+    "id": "ef0",
+    "name": "安全岛",
+    "url": "./assets/img/toolbar/maptool_fullview_select.png"
+  },
+  {
+    "id": "ef0",
+    "name": "安全岛",
+    "url": "./assets/img/toolbar/maptool_full_select.png"
+  },
+  {
+    "id": "e-point",
+    "name": "坐标点",
+    "url": "./assets/img/map/pin_bg.png"
+  }
+]

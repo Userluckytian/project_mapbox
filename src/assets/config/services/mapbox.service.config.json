@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "code": 200,
+    "msg": "操作成功"
+  },
+  "data": [
+    {
+      "id": "special.map",
+      "des": "专题地图服务样式",
+      "url": "http://webres.cityfun.com.cn/fhgx_zt/zt.json"
+    },
+    {
+      "id": "special.ions",
+      "des": "专题图图图标",
+      "url": "./assets/config/mapbox.style.config/mapbox.special.icons.json"
+    },
+    {
+      "id": "tree.config",
+      "des": "图层书配置文件",
+      "url": "./assets/config/maptree/map.tree.config.json"
+    },
+    {
+      "id": "base.map",
+      "des": "底图样式",
+      "url": "http://webres.cityfun.com.cn/fhgx_zt/fh_base/map.json"
+    },
+    {
+      "id": "tree.key.layer.id",
+      "des": "图层树节点ID，图层ID",
+      "url": "./assets/config/mapbox.style.config/mapbox.tree.key.layerid.json"
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "version": "v1.0.0",
+  "href": "",
+  "ticket": "3DA397BEA3A3B7D3AD4AEBA5C8F5FC4034E1B70A3CA2A8F710B40279A406C20E55AD0E16C178EBC6AA5F9715A16B1FD12E68780802C837E3890C4F410D36E1FA03097491561E787B39F52131B9955A76D5B0E95C0ED303D289ED3E3A02536C0F03A20376D7311798",
+  "status": {
+    "code": "200",
+    "desc": "操作成功"
+  },
+  "data": [
+    {
+      "key": "BasicGeography",
+      "title": "基础地理",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "52cc8e4a-f943-4e99-95fa-94760ceefce5",
+          "title": "行政区划",
+          "icon": "root.png",
+          "expanded": true,
+          "children": [
+            {
+              "key": "0e3cb935-931c-46ab-b078-043ca6ad9670",
+              "title": "汾湖高新区",
+              "query": false,
+              "isLeaf": true,
+              "checked": true
+            },
+            {
+              "key": "31de50ea-ad99-4c9c-81c6-37c218ea3f9e",
+              "title": "村社区",
+              "query": false,
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "90929194-c148-485c-bd28-5a635a1ed3a4",
+          "title": "电子地图",
+          "icon": "root.png",
+          "disabled":true,
+          "expanded": false,
+          "children": [
+            {
+              "key": "bb8d90b4-e075-456e-94bf-fe9fc3e0e207",
+              "title": "行政界限",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "8ebc8c04-6c1b-488a-95b0-3d1e819ee9ad",
+              "title": "道路中心线",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "f859ea4d-a66f-454a-b963-73d14719369b",
+              "title": "轨道交通",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "9b2e196b-2cb9-4a8f-8a2b-52a1d04c901e",
+              "title": "建筑物",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "f5fa3756-fa38-48a8-9bae-790c11945cfe",
+              "title": "水系",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "f778a0f3-0de6-40f0-84c2-a2a7f57e2f75",
+              "title": "绿地",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "eb010daf-0b97-4c5e-b5d5-2f000de2a7ee",
+              "title": "地块",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            },
+            {
+              "key": "3936e75a-43da-4212-984f-1841510eb1e4",
+              "title": "兴趣点",
+              "query": false,
+              "isLeaf": true,
+              "disabled":true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "0fa70176-137d-44b8-9ded-f39e6f7b0a28",
+          "title": "影像图",
+          "icon": "root.png",
+          "disabled":false,
+          "expanded": false,
+          "children": [
+            {
+              "key": "7e845261-0094-4f4e-8bae-3778ba2cb56d",
+              "title": "2020影像图",
+              "query": false,
+              "isLeaf": true,
+              "disabled":false,
+              "checked": false
+            },
+            {
+              "key": "3c90ad63-d75b-485b-80a1-c230a5bf7c46",
+              "title": "2019影像图",
+              "query": false,
+              "isLeaf": true,
+              "disabled":false,
+              "checked": false
+            },
+            {
+              "key": "e3766fa8-3da3-4339-a6bc-47b2c3c159a7",
+              "title": "2018影像图",
+              "query": false,
+              "isLeaf": true,
+              "disabled":false,
+              "checked": false
+            },
+            {
+              "key": "aa3ee34a-98ae-4ae4-a321-677ff5267d14",
+              "title": "2017影像图",
+              "query": false,
+              "isLeaf": true,
+              "disabled":false,
+              "checked": false
+            },
+            {
+              "key": "931dba14-9e79-4f96-938c-345b7d2fcd3d",
+              "title": "2016影像图",
+              "query": false,
+              "isLeaf": true,
+              "disabled":false,
+              "checked": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ReferenceElements",
+      "title": "参考要素",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "1a73bdb2-04bc-4ec7-8e96-a8d3f1819a00",
+          "title": "道路",
+          "layerId": "dljt_dlzxx_l",
+          "query": false,
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "fcbaa26b-1222-4391-8fde-cf83071788b3",
+          "title": "水系",
+          "query": false,
+          "layerId": "sx_sx_p",
+          "isLeaf": true,
+          "disabled": false,
+          "checked": false
+        },
+        {
+          "key": "66a0dbc2-2e13-4f3e-b74e-60cead79545d",
+          "title": "地块",
+          "query": false,
+          "layerId": "qydy_dk_p",
+          "isLeaf": true,
+          "checked": false
+        }
+      ]
+    },
+    {
+      "key": "PlanningPipeline",
+      "title": "规划排水管线",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "73d981c3-46b5-4e3c-b750-62ee72341ce2",
+          "title": "雨水管线",
+          "query": false,
+          "layerId": "",
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "041df6b4-11fa-4819-812f-3f6b8b6da3a7",
+          "title": "污水管线",
+          "query": false,
+          "layerId": "",
+          "isLeaf": true,
+          "checked": false
+        }]
+    },
+    {
+      "key": "DrainagePipeline",
+      "title": "排水管线",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "3b6de96c-4b4f-4264-8494-efd0808ba722",
+          "title": "排水区块",
+          "layerId": "zpsgx_psqk_p",
+          "query": false,
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "275ca944-4654-42db-bffd-65502df342c0",
+          "title": "雨水",
+          "expanded": false,
+          "children": [
+            {
+              "key": "3ac09ca1-bcb2-4025-9d34-c8325e411054",
+              "title": "雨水管点",
+              "query": false,
+              "layerId": "zpsgx_ysgd_pt",
+              "isLeaf": true,
+              "checked": false
+            },
+            {
+              "key": "6c5e83ce-0eca-4c19-9ef4-f8da82f96608",
+              "title": "雨水管段",
+              "query": false,
+              "layerId": "zpsgx_ysgd_l",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "d1efe90d-44ec-45c4-adca-a4490e408081",
+          "title": "污水",
+          "expanded": false,
+          "children": [
+            {
+              "key": "ac6655b1-d510-4bb8-a16a-5c2fd0b923cf",
+              "title": "污水管点",
+              "query": false,
+              "layerId": "zpsgx_wsgd_pt",
+              "isLeaf": true,
+              "checked": false
+            },
+            {
+              "key": "f867b705-f1ad-40dc-ae25-8ea3cc6966ea",
+              "title": "污水管段",
+              "query": false,
+              "layerId": "zpsgx_wsgd_l",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "DrainageFacilities",
+      "title": "排水设施",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "0ae1f99b-39bb-43d5-bbf9-cd59809d123b",
+          "title": "污水处理厂",
+          "query": false,
+          "layerId": "zpsss_wsclc_pt",
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "505d9505-1842-4a69-ba2e-1f34277472a0",
+          "title": "雨水泵站",
+          "query": false,
+          "layerId": "zpsss_ysbz_pt",
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "505d9505-672-4a69-ba2e-1f34277472a0",
+          "title": "污水泵站",
+          "query": false,
+          "layerId": "zpsss_wsbz_pt",
+          "isLeaf": true,
+          "checked": false
+        },
+        {
+          "key": "61570631-2f0b-4141-ad5e-af4783e974de",
+          "title": "雨水口",
+          "query": false,
+          "layerId": "",
+          "isLeaf": true,
+          "checked": false
+        }
+      ]
+    },
+    {
+      "key": "checkData",
+      "title": "检测数据",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "9afc8538-3dbf-444f-b51a-71ebdb59d4ec",
+          "title": "CCTV检测",
+          "expanded": false,
+          "children": [
+            {
+              "key": "c48e3523-4803-42cb-ab14-05769bcab86b",
+              "title": "检测路段",
+              "query": false,
+              "layerId": "zjcsj_jcld_l",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "9afc8538-3dbf-784f-b51a-71ebdb59d4ec",
+          "title": "QV检测",
+          "expanded": false,
+          "children": [
+            {
+              "key": "c48e3523-4803-4287-ab14-057645cab86b",
+              "title": "检测小区",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PipelineThematic",
+      "title": "管线专题图",
+      "icon": "root.png",
+      "expanded": true,
+      "children": [
+        {
+          "key": "3979faa0-5fde-46aa-924b-aaccdab90b85",
+          "title": "管径分布图",
+          "icon": "root.png",
+          "expanded": true,
+          "children": [
+            {
+              "key": "2da661d9-8dc0-4539-a15a-8fafebcfbad1",
+              "title": "雨水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            },
+            {
+              "key": "d8f9ff22-a569-43fd-84f5-3dbc9df56bfa",
+              "title": "污水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "ac30d6f8-eb17-41a4-97f4-4e1cefbad191",
+          "title": "坡度分布图",
+          "icon": "root.png",
+          "expanded": true,
+          "children": [
+            {
+              "key": "b82f38dc-d673-4fe4-8c20-6ca3ad8ed599",
+              "title": "雨水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            },
+            {
+              "key": "d0604088-8d5c-466f-b701-92628dad8d0f",
+              "title": "污水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        },
+        {
+          "key": "7dab34c3-88fe-4339-85a2-e95a1b0e6e06",
+          "title": "埋深分布图",
+          "icon": "root.png",
+          "expanded": true,
+          "children": [
+            {
+              "key": "358000f0-cee4-4523-8b0d-28c4b36053b6",
+              "title": "雨水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            },
+            {
+              "key": "cd07d0a8-93fc-4586-baaf-c012354fd32d",
+              "title": "污水管线",
+              "query": false,
+              "layerId": "",
+              "isLeaf": true,
+              "checked": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "template": null,
+  "userkey": "653b8a0d-7951-46d0-926c-5d45470832dd"
+}

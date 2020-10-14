@@ -1,0 +1,48 @@
+{
+  "basemaps": [
+    {
+      "title": "彩色版",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "http://webres.cityfun.com.cn/fhgx_zt/fh_base/map.json"
+    },
+    {
+      "title": "深色版",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "http://webres.cityfun.com.cn/szmap/szmap_dark_wz/4326/map_dark.json"
+    }
+  ],
+  "images": [
+    {
+      "title": "2020年影像",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "./assets/config/mapbox.style.config/base.map/image/image2020.json"
+    },
+    {
+      "title": "2019年影像",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "./assets/config/mapbox.style.config/base.map/image/image2019.json"
+    },
+    {
+      "title": "2018年影像",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "./assets/config/mapbox.style.config/base.map/image/image2018.json"
+    },
+    {
+      "title": "2017年影像",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "./assets/config/mapbox.style.config/base.map/image/image2017.json"
+    },
+    {
+      "title": "2016年影像",
+      "des": "",
+      "img": "./assets/img/mapthumbnail/map01.png",
+      "style": "./assets/config/mapbox.style.config/base.map/image/image2016.json"
+    }
+  ]
+}
