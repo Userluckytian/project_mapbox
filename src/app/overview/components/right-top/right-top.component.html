@@ -1,0 +1,32 @@
+<div class="right_top_content">
+
+  <div class="title">左侧标题</div>
+  
+  <div class="content">
+    <div class="content_title">
+      <div id="left">产业</div>
+      <div id="mid">数量（家）</div>
+      <div id="right">产值（亿元）</div>
+    </div>
+    <div class="content_content" *ngFor="let item of array">
+      <!-- 三个div，第一个单行文本显示，第二个和第三个类似，设置填充颜色和  -->
+      <!-- mid设置判断条件。 -->
+      <div id="content_content_left" title="{{item}}">这里是标题这里是标题这里</div>
+
+
+      <!-- TODO:主要把这个搞清楚 -->
+      <div id="content_content_mid">
+        <!-- 小于五，展示一个span外加一个div。||||||||||||||||||大于五，只展示一个。 -->
+        <span *ngIf="item<=5" class="downfive">{{item}}</span>
+        <div id="downfive111" [style.width.%]="item*10">
+          <span *ngIf="item>5" class="overfive">{{item}}</span>
+        </div>
+      </div>
+
+
+
+
+      <div id="content_content_right">1358</div>
+    </div>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MyServiceService } from './my-service.service';
 import { CoreModule, StartupService, ResourceMetaInfoService, DefaultInterceptor } from '@cmss/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ShareModule } from './share/share.module';
 
 // tslint:disable-next-line: typedef
 export function StartupServiceFactory(startupService: StartupService) {
@@ -27,7 +28,8 @@ export function StartupServiceFactory(startupService: StartupService) {
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    ShareModule
   ],
   providers: [
     MyServiceService,

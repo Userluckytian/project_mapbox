@@ -1,0 +1,32 @@
+<div class="countData">
+  
+    <div class="title">
+      <!-- 左标题 -->
+      <div class="title-left">
+          <span id="titletxt">我是左标题</span>
+      </div>
+      <!-- 右标题 -->
+      <div class="title-right">
+          <span>我是右标题</span>
+      </div>
+      
+     
+    </div>
+  
+    <div class="content">
+  
+      <!-- 网格布局，一分为4 -->
+      <!--  -->
+      <div class="content1"  *ngFor="let item of person">
+              <span>{{item}}</span>
+              <br>
+              <hr style="height:1px">
+              <span>{{item}}</span>
+              <br>
+              <span>{{item}}</span>    
+      </div>
+  
+    </div>
+    
+  </div>
+  

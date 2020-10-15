@@ -1,0 +1,93 @@
+.all_content{
+    padding: 0px 20px;
+    width: 860px;
+    border-radius: 5px;
+    background-color: #FDB9B9;
+    .title{
+        height: 50px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 50px;
+        margin: 0 auto;
+    }
+    .title::before{
+        content:'\260E';
+        font-size: 15px;
+        margin-right: 3px;
+    }
+    .content{
+        height: 262px;
+        display: grid;
+        //定义两行两列网格(能确定刚好48%吗？咋嫩玄乎呢？)
+        grid-template-columns: 280px 280px 280px;
+        grid-template-rows: 116px 116px;
+        //定义行和行和列和列的间距
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        //定义content下的内容居中(加垂直居中)
+        .detail_msg{
+            background-color: #ABB67A;
+            width: 240px;
+            height: 106px;
+            border-radius: 8px;
+            padding: 0px 20px 10px;
+            .detail_title{
+                height: 41px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 41px;
+                margin: 0 auto;
+
+                .detail_title_right{
+                    text-align: right;
+                }
+            }
+            .detail_content{
+                height: 41px;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                .detail_content_left{
+                    display: flex;
+                    align-items: baseline;
+                    #tagNum{
+                        font-family: BebasNeue;
+                        font-size: 30px;
+                        line-height: 41px;
+                        margin: 0 auto;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                .detail_content_right{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: baseline;
+                    text-align: right;
+                    #thrad::before{
+                        content:'\260E';
+                        font-size: 15px;
+                        margin-right: 5px;
+                    }
+                    #num{
+                        font-family: BebasNeue;
+                        font-size: 22px;
+                    }
+                    #year{
+                        font-size: 14px;
+                        margin-right: 5px;
+                    }
+                }
+
+            }
+            span{
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+// font-family: BebasNeue;
+// font-size: 36px;

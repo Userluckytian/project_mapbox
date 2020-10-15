@@ -10,6 +10,10 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "src/typings.d.ts"
+    ],
     "target": "es2015",
     "module": "es2020",
     "lib": [

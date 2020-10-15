@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/lodash.js",
+              "src/assets/libs/postal.min.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,28 @@
+<div class="mid_up_component">
+  <div class="title">
+    <div class="title_left">绿化分布可视化</div>
+    <div class="title_mid">
+      <nz-radio-group ngDefaultControl [(ngModel)]="radioValue">
+        <label nz-radio-button nzValue="A">按收入</label>
+        <label nz-radio-button nzValue="B">按日期</label>
+      </nz-radio-group>
+    </div>
+    <div  class="title_right">
+      <select class="chooseitem">
+        <option class="chooseitem_style" value="2020">2020</option>
+        <option class="chooseitem_style" value="2019">2019</option>
+        <option class="chooseitem_style" value="2018">2018</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="content" id="home_map">
+    <button type="button" class="draw_button" id="button1" (click)="reset()"></button>
+    <button type="button" class="draw_button" id="button2" (click)="drawSmooth()"></button>
+    <button type="button" class="draw_button" id="button3" (click)="clear()"></button>
+    <button type="button" class="draw_button" id="button4" (click)="measureArea()"></button>
+    <button type="button" class="draw_button" id="button5" (click)="measureDistance()"></button>
+    <div id="mouse-position"></div>
+  </div>
+  <div id="popup" class="ol-popup"></div>
+</div>

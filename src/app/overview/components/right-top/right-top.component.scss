@@ -1,0 +1,72 @@
+.right_top_content{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 0 20px;
+    .title{
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .title::before{
+        content:'\260E';
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .content{
+        height: 262px;
+        .content_title{
+                display: flex;
+                font-size: 14px;
+                font-weight: bold;
+            #left, #right{
+                width: 33%;
+                }
+                
+            #mid{
+                margin: 0px 5px;
+                width: 33%;
+                text-align: right;
+            }
+        }
+        .content_content{
+            display: flex;
+            margin-bottom: 5px;
+            #content_content_left{
+                font-size: 14px;
+                //设置单行文本省略
+                width: 33%;
+                //超出部分隐藏
+                overflow: hidden;
+                //当存在overflow：hidden时，该属性才生效（效果，超出部分显示省略号）
+                text-overflow: ellipsis;
+                //永不换行
+                white-space: nowrap;
+            }
+            #content_content_mid{
+                display: flex;
+                justify-content: flex-end;
+                width: 33%;
+                margin: 0px 5px;
+                background-color: linear-gradient(#2465F1, #59DAFA);
+                
+                .downfive{
+                    
+                }
+                #downfive111{
+                    height: 100%;
+                    background-color: #59DAFA;
+                }
+            }
+            #content_content_right{
+                width: 33%;
+                text-align: right;
+                background-color: linear-gradient(#2465F1, #59DAFA);
+                background-color: #59DAFA;
+            }
+        }
+    }
+
+}

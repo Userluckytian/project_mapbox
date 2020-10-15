@@ -1,1 +1,24 @@
-<div>{{title}}</div>
+
+<!-- 标题部分 -->
+<div class="title">
+  
+    <!-- 标题左边 -->
+    <div class="title-left">
+        <img class="left1" src="../assets/img/logos.png" alt="这是logo" />
+        <div class="left2">
+          <ul>
+            <li *ngFor="let item of [0, 1, 2]" (click)="routerTo(item)">标题{{item}}</li>
+  
+          </ul>
+        </div>
+    </div>
+    <!-- 标题右边 -->
+    <div class="title-right">
+        <ul>
+            <li>全屏</li>
+            <li>管理员<span></span></li>
+          </ul>
+    </div>
+  
+  </div>
+<router-outlet> </router-outlet>

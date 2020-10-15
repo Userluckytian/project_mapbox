@@ -1,0 +1,49 @@
+.countData{
+    background-color: #F8A8A8;
+    padding: 0px 20px;
+    width: 410px;
+    border-radius: 5px;
+
+    .title{
+        height: 48px; 
+        display: flex;
+        justify-content: space-between;
+        .title-right{
+            text-align: right;
+
+        }
+        span{
+            margin: 0 auto;
+            line-height: 50px;
+            font-size: 14px;
+        }
+        #titletxt{
+            font-weight: bold;
+        }
+        #titletxt::before{
+        content:'\260E';
+        font-size: 15px;
+        margin-right: 3px;
+        }
+    };
+    
+    .content{
+        height:262px;
+        display: grid;
+        //定义两行两列网格(能确定刚好48%吗？咋嫩玄乎呢？)
+        grid-template-rows: 115px 115px;
+        grid-template-columns: repeat(2, 48.5%);
+        //定义行和行和列和列的间距
+        grid-row-gap: 12px;
+        grid-column-gap: 12px;
+        //定义content下的内容居中(加垂直居中)
+        text-align: center;
+        .content1{
+            border-radius: 8px;
+            padding-top: 30px; 
+            height: 85px;
+            background-color: #ABB67A
+        }
+    }
+
+}

@@ -1,0 +1,320 @@
+.left-mid-content{
+    
+    .content{
+        height: 312px;
+        width: 450px;
+
+        .clip_animation{
+            position: relative;
+            width:128px;
+            height:96px;
+            margin: 20px;
+            border: solid 1px #000;
+        }
+        .shine {
+            position: relative;
+            margin: 20px;
+            width: 300px;
+            z-index: 999;
+            height: 60px;
+            box-shadow: inset 0 0 2px 1px #dcb7ff;
+            background-color: #272323;
+            // border: solid 1px #000;
+            border-radius: 2px;
+        }
+        .shine::before {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            content: '';
+            z-index: 1; //如何置于下面一层，总是居于底层导致出不来！
+            margin: 0;
+            box-shadow: 0px 0px 2px 5px #9f00fc;
+            width: 0px;
+            height: 0px;
+            animation: rightShine 6s linear infinite;
+        }
+        
+    }
+    
+}
+
+
+// 128，96
+.clip_animation::before {
+    position: absolute;
+    top: 0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border:5px solid #cc00ff;
+    content: '';
+    margin:-5%;
+    animation: clips 5s infinite linear;
+  } 
+// clip:rect(上边起始的距离 ,  自左道右的距离,  自上到下的距离,  左边起始的距离)
+.clip_animation:hover::before {
+    background-color: rgba(119, 0, 255, 0.3);
+  }
+
+  // 148 116
+  @keyframes clips {
+    0%,100% {
+        clip: rect(0 148px 2px 0);
+    }
+    25% {
+        clip: rect(0 2px 148px 0px);
+    }
+    50% {
+         clip: rect(148px 116px 148px 0);
+    }
+    75% {
+        clip: rect(0 148px 116px 148px);
+    }
+  }  
+
+
+
+
+
+/* 光点特效散色粒子 */
+@keyframes rightShine {
+
+    0%, 100% {
+        top: 0px;
+        left: 0px;
+    }
+
+    40% {
+        top: 0px;
+        left: 296px;
+    }
+
+    50% {
+        top: 54px;
+        left: 296px;
+    }
+
+    90% {
+        top: 54px;
+        left: 0px;
+    }
+}
+
+
+/* 没搞明白
+简单来说就是我们需要一个div框，
+它可以不基于任何定位来做！
+但是它的伪类元素，需要一个绝对定位！！！
+所以我们尽量使div本身处于相对定位，这样我们的伪标签基于其做绝对定位然后进行裁剪动画。效果刚刚好！
+ 
+其他的解决办法：叠加一个div框，根据时间移动位置和大小
+
+*/
+
+
+// 这是一个完整的示例！ 
+// <!DOCTYPE html>
+// <html>
+
+// <head>
+//     <meta charset="utf-8">
+//     <title></title>
+//     <style type="text/css">
+//         * {
+//             margin: 0;
+//             padding: 0;
+//         }
+
+//         body {
+//             background: rgba(241, 249, 255, 0.8);
+//         }
+
+//         .box {
+//             height: 200px;
+//             width: 200px;
+//             background: rgba(10, 150, 220, 1);
+//             margin: 50px auto;
+//             position: relative;
+//         }
+
+//         .box::before {
+//             content: "";
+//             position: absolute;
+//             width: 220px;
+//             height: 220px;
+//             box-shadow: inset 0 0 0 2px #9bfaf5;
+//             /*内阴影 inset*/
+//             left: 0;
+//             top: 0;
+//             margin: -10px;
+
+//             /* 
+//                 设计CLIP:
+//                  clip:rect(上边起始的距离 ,  自左道右的距离,  自上到下的距离,  左边起始的距离)
+//                  */
+//             /* 开始0% ： 裁剪保留上边部分*/
+//             /* clip: rect(0px, 220px, 2px, 0px); */
+//             /* 25% ： 裁剪保留左边部分*/
+//             /* clip: rect(0px, 2px, 220px, 0px); */
+//             /* 50% ： 裁剪保留底边部分*/
+//             /* clip: rect(218px, 220px, 220px, 0px); */
+//             /*  75% ： 裁剪保留右边部分 */
+//             /* clip: rect(0px, 220px, 220px, 218px); */
+//             /* 结束100% ： 回到原点 裁剪保留上边部分*/
+//             /* clip: rect(0px, 220px, 2px, 0px); */
+
+//             animation: aaa 6s linear infinite;
+//             /*应用动画aaa 匀速运动  重复执行*/
+//         }
+
+//         article {
+//             box-shadow: inset 0 0 0 2px #9bfaf5;
+//             /* box-shadow:aquamarine  */
+//         }
+
+//         @keyframes aaa {
+
+//             0%,
+//             100% {
+//                 clip: rect(0px, 220px, 2px, 0px);
+//                 /*初始和结束状态:上边线条*/
+//             }
+
+//             25% {
+//                 clip: rect(0px, 2px, 220px, 0px);
+//                 /*左边线条*/
+//             }
+
+//             50% {
+//                 clip: rect(218px, 220px, 220px, 0px);
+//                 /*底边线条*/
+//             }
+
+//             75% {
+//                 clip: rect(0px, 220px, 220px, 218px);
+//                 /*右边线条*/
+//             }
+//         }
+
+//         .shine {
+//             position: relative;
+//             margin: 20px;
+//             width: 300px;
+//             height: 60px;
+//             background-color: #333;
+//             box-shadow: inset 0 0 2px 1px #dcb7ff;
+//             border-radius: 2px;
+//         }
+
+//         .shine::before {
+//             position: absolute;
+//             top: 0px;
+//             bottom: 0px;
+//             left: 0px;
+//             right: 0px;
+//             content: '';
+//             z-index: -1;
+//             margin: 0;
+//             box-shadow: 0px 0px 1px 5px #9bfaf5;
+//             width: 5px;
+//             height: 5px;
+//             animation: rightShine 6s linear infinite;
+//         }
+
+
+
+//         /* 光点特效散色粒子 */
+//         @keyframes rightShine {
+
+//             0%,
+//             100% {
+//                 top: 0px;
+//                 left: 0px;
+//             }
+
+//             40% {
+//                 top: 0px;
+//                 left: 296px;
+//             }
+
+//             50% {
+//                 top: 54px;
+//                 left: 296px;
+//             }
+
+//             90% {
+//                 top: 54px;
+//                 left: 0px;
+//             }
+//         }
+
+
+//         .caret {
+//             /* width: 0px;
+//             height: 0px; */
+//             width: 30px;
+//             height: 30px;
+//             /* border: 50px solid rgb(255, 0, 0); */
+
+//             border-top: 50px solid transparent;
+//             /* border-top: 50px solid transparent;  透明 */
+//             border-right: 50px solid red;
+//             border-bottom: 50px solid red;
+//             border-left: 50px solid transparent;
+//             /* 只要底边和左边也可以组成两个形状！html中看下效果 */
+//         }
+
+//         .circle {
+//             width: 100px;
+//             height: 100px;
+//             /* width: 0px;
+//             height: 0px; */
+//             border-radius: 50%;
+//             /* border: 50px solid rgb(255, 0, 0); */
+
+//             border-top: 50px solid blue;
+//             /* border-top: 50px solid transparent;  透明 */
+//             border-right: 50px solid red;
+//             border-bottom: 50px solid green;
+//             border-left: 50px solid black;
+//         }
+
+//         button {
+//             width: 50px;
+//             height: 50px;
+//             border-radius: 25px;
+//             border: none;
+//             transition: color 1s ease-in 1s;
+//         }
+
+//         button:hover {
+//             cursor: pointer;
+//             animation: open 1s linear forwards alternate;
+//         }
+
+//         @keyframes open {
+//             from {
+//                 width: 50px;
+//                 background: rgb(3, 194, 241);
+//             }
+
+//             to {
+//                 width: 100px;
+//                 background: rgb(46, 252, 217);
+//             }
+//         }
+//     </style>
+// </head>
+
+// <body>
+//     <div class="box"></div>
+//     <div class="shine"></div>
+//     <div class="caret"></div>
+//     <div class="circle"></div>
+//     <button>hello</button>
+// </body>
+
+// </html>
