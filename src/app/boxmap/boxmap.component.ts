@@ -17,6 +17,7 @@ export class BoxmapComponent implements OnInit {
     // private dataRxInquireService: ModuleDataRxInquireService
   ) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
     this.mapService.init();
   }

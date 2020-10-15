@@ -2,14 +2,11 @@
 
 .content{
     padding: 28px 30px;
-    width: 1843px; //需要在原来的基础上减少60.
     background-color: #C4E8EB;
     display: grid;
     //定义三行三列网格(1096*1024)
     grid-template-rows: 312px 312px 312px;
-    grid-template-columns: 450px 900px 450px;
-    
-
+    grid-template-columns: 1fr 2fr 1fr;
     //定义行和行和列和列的间距
     grid-row-gap: 10px;
     grid-column-gap: 10px;
