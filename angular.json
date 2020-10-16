@@ -33,7 +33,8 @@
             ],
             "scripts": [
               "src/assets/libs/lodash.js",
-              "src/assets/libs/postal.min.js"
+              "src/assets/libs/postal.min.js",
+              "node_modules/@cgcs2000/mapbox-gl/dist/mapbox-gl.js"
             ]
           },
           "configurations": {
