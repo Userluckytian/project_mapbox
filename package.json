@@ -24,6 +24,8 @@
     "@cmss/core": "^8.6.0",
     "chaikin-smooth": "^1.0.4",
     "lodash": "^4.17.20",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
     "ng-zorro-antd": "^10.0.1",
     "ol": "^6.4.3",
     "rxjs": "~6.6.0",
