@@ -9,5 +9,5 @@
 2020/10/27
     feat：1、引入@mapbox/mapbox-gl-draw、mapbox-gl-draw-rectangle-mode、mapbox-gl-draw-circle依赖，
           2、实现绘制点线面并定义好输出geo内容！新增绘制工具条组件、新增面积测量工具条组件（未实现内容）
-2020/10/27
-    feat：引入turf依赖
+2020/10/28
+    feat：引入turf依赖、修改全局滚动条样式
