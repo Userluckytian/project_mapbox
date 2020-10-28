@@ -9,6 +9,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.2",
@@ -22,8 +27,12 @@
     "@antv/g2": "^4.0.15",
     "@cgcs2000/mapbox-gl": "^1.12.0",
     "@cmss/core": "^8.6.0",
+    "@mapbox/mapbox-gl-draw": "^1.2.0",
+    "@turf/turf": "^5.1.6",
     "chaikin-smooth": "^1.0.4",
     "lodash": "^4.17.20",
+    "mapbox-gl-draw-circle": "^1.1.2",
+    "mapbox-gl-draw-rectangle-mode": "^1.0.4",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9",
     "ng-zorro-antd": "^10.0.1",

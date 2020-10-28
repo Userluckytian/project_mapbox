@@ -6,3 +6,8 @@
     feat：增加module压缩包，样式调整、引入lodash依赖
 2020/10/19
     feat：引入mongodb、mongoose依赖
+2020/10/27
+    feat：1、引入@mapbox/mapbox-gl-draw、mapbox-gl-draw-rectangle-mode、mapbox-gl-draw-circle依赖，
+          2、实现绘制点线面并定义好输出geo内容！新增绘制工具条组件、新增面积测量工具条组件（未实现内容）
+2020/10/27
+    feat：引入turf依赖
