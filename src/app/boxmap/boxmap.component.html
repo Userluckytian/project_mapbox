@@ -1,1 +1,8 @@
-<div id='mapboxmap' class="mapDom"></div>
+<div class="mapContainer">
+    <div id='mapboxmap' class="mapDom"></div>
+    <!-- 工具条存在于组件内部、地图在外部。。。
+        （方法一、地图写在内部，即将地图init的服务文件在绘制服务文件中引入，详情看幕布文档---地图相关知识---绘制事件！）
+        （方法一、我想尝试把整个mapboxmap实例传递给后台） -->
+    <app-draw-tools class="drawtoools" (currentMode)="doDraw($event)"></app-draw-tools>
+    <app-measure-tools class="measuretools" (currentMeasure)="doMeasure($event)"></app-measure-tools>
+</div>

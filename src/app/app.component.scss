@@ -5,8 +5,8 @@
     background-image: linear-gradient(#4F7DFC,#668BF1);
     display: flex;
     justify-content: space-between;
-    //粘性
-    position: sticky;
+    //粘性sticky
+    position: position;
     top:0;
     z-index: 999;
     .title-left{
@@ -38,7 +38,13 @@
         }
     }
 }
-
+.content{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+}
 //通用部分
 ul{
     display:flex;

@@ -1,0 +1,19 @@
+@mixin flexs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.measure-tools{
+    @include flexs;
+    flex-direction: column;
+    .item{
+        @include flexs;
+    }
+    // 除了最后一个，其他的都添加margin-bottom:10px
+    .item:not(:last-child){
+        margin-bottom: 10px;
+    }
+    
+}

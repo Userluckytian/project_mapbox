@@ -19,17 +19,17 @@ export class BoxmapService {
     private http: HttpClient,
     // private dataRxInquireService: ModuleDataRxInquireService
   ) {
-    this.init();
-    // this.init().then((res) => {
-    //   console.log("地图创建完成");
-    //   this.mapboxmap.on("load", () => {
-    //     console.log("样式加载完成");
-    //     this.addSplieGroupLayer();
-    //     this.getSpecialMapIcon().then((icon: any) => {
-    //       this.addFunctionIcon(icon);
-    //     });
-    //   });
-    // });
+    // this.init();
+    this.init().then((res) => {
+      console.log("地图创建完成");
+      this.mapboxmap.on("load", () => {
+        console.log("样式加载完成");
+        // this.addSplieGroupLayer();
+        // this.getSpecialMapIcon().then((icon: any) => {
+        //   this.addFunctionIcon(icon);
+        // });
+      });
+    });
   }
 
   /**

@@ -1,0 +1,13 @@
+@mixin flexs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.draw-tools{
+    @include flexs;
+    .item{
+        @include flexs;
+    }
+}

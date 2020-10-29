@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
 // 定义滑动工具条信息
 ::-webkit-scrollbar{
     width: 2px;
@@ -21,4 +22,33 @@
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color:#DFE6EA;
+}
+
+// 定义测量工具弹出的测量结果面板的样式
+.mapboxgl-popup {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    pointer-events: none;
+}
+.mapboxgl-popup-tip {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    z-index: 1;
+    position: relative;
+    left: 18px;
+}
+.mapboxgl-popup-content {
+    position: relative;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #fcd86e;
+    font-size: 14px;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip{
+  border-top-color: #fcd86e;
 }

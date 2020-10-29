@@ -1,5 +1,27 @@
-#mapboxmap{
-    height: 100%;
-    width: 100%;
+@mixin contents{
+  height: 100%;
+  width: 100%;
+}
+
+.mapContainer{
+  @include contents;
+  #mapboxmap{
+    @include contents;
   }
+  .drawtoools{
+    position: absolute;
+    z-index: 999;
+    right: 20px;
+    top: 20px;
+    width: 200px;
+  }
+  .measuretools{
+    position: absolute;
+    z-index: 999;
+    right: 20px;
+    top: 65px;
+    width: 60px;
+  }
+}
+
  
