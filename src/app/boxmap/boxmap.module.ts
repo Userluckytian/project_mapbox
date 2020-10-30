@@ -10,7 +10,7 @@ import { ShareModule } from '../share/share.module';
   imports: [
     CommonModule,
     BoxmapRoutes,
-    ShareModule
+    ShareModule,
   ],
   declarations: [BoxmapComponent, DrawToolsComponent, MeasureToolsComponent],
   providers:[BoxmapService]

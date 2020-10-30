@@ -10,7 +10,6 @@ export class DrawToolsComponent implements OnInit {
 
   @Input() mapboxmap = null;
   @Output() currentMode = new EventEmitter<any>();
-  currentSelect = '';
   data = [
     {
       id: 'draw_rectangle',
@@ -31,13 +30,6 @@ export class DrawToolsComponent implements OnInit {
   }
   // tslint:disable-next-line: typedef
   draw(e) {
-    if (e.id !== this.currentSelect) {
-      this.currentSelect = e.id;
       this.currentMode.emit(e);
-    } else {
-      this.currentSelect = '';
-      return;
-    }
   }
-
 }

@@ -22,6 +22,10 @@ export class BoxmapComponent implements OnInit, OnDestroy {
   measureType = '';
   popup = null;
   ids = [];
+  // 用户最新绘制的图层的id
+  currentid = '';
+  // 优秀操作，以后自己也要记得！并不是只可以创建内部单一对象元素，我们可以创建出来多个！外部！元素！
+  popups = {};
   constructor(
     private mapService: BoxmapService,
     private mapDrawtoolsService: MapDrawtoolsService
@@ -60,13 +64,11 @@ export class BoxmapComponent implements OnInit, OnDestroy {
       this.closeMeasure();
       if (this.ids.length > 0) {
         this.mapDrawtoolsService.clearById(this.ids);
-        this.popup = this.popup ? this.popup.remove() : null;
+        this.removePupupById(this.ids);
         return;
       }
     } else {
-      // 清空坐标点内容，并构建一个popup框
       this.MeasureCoorDinates = [];
-
       this.draw.changeMode(e.id);
       this.startMeasure = true;
       this.measureType = e.measureType;
@@ -82,12 +84,13 @@ export class BoxmapComponent implements OnInit, OnDestroy {
     map.on('draw.selectionchange', doChanges);
     // tslint:disable-next-line: typedef
     function updateArea(e) {
-      const data = self.draw.getAll();
-      console.log(data);
+      // TODO:暂时无法控制什么时候startDraw是true状态，所以我先把这句话放在外面！
+      self.currentid = e.features[0].id;
       if (self.startDraw) {
         // 获取地图上绘制的所有元素！
         const data = self.draw.getAll();
       } else if (self.startMeasure) {
+        // self.currentid = e.features[0].id;
       }
     }
     // tslint:disable-next-line: typedef
@@ -109,6 +112,23 @@ export class BoxmapComponent implements OnInit, OnDestroy {
       const { lng, lat } = e.lngLat;
       if (self.startMeasure) {
         self.MeasureCoorDinates.push([lng, lat]);
+        // 先更新信息
+        // 优秀操作：每次的id是不同的，同样的，这个对象会生成很多信息！
+        self.popups[self.currentid] = new mapboxgl.Popup({ closeButton: false, closeOnClick: false });
+        if (this.measureType === 'length') {
+          const line = turf.lineString(self.MeasureCoorDinates);
+          const length = turf.length(line, { units: 'miles' });
+          self.popups[self.currentid].setLngLat([lng, lat])
+            .setHTML(`${Math.floor(length * 100) / 100} km`).addTo(this.mapboxmap);
+        } else {
+          const newcoords = this.isClosedShape(self.MeasureCoorDinates);
+          // 外面再新增一层[]！
+          const polygon = turf.polygon([newcoords]);
+          const area = turf.area(polygon);
+          const center = turf.centerOfMass(polygon);
+          self.popups[self.currentid].setLngLat(center.geometry.coordinates)
+            .setHTML(`${Math.floor(area / 1000 / 1000 * 100) / 100} km<sup>2</sup>`).addTo(this.mapboxmap);
+        }
         // 停止一切可能的事件（双击代表停止绘制，首先设置startMeasure = false;空间查询的后面考虑）
         self.startMeasure = false;
         self.measureType = '';
@@ -138,7 +158,7 @@ export class BoxmapComponent implements OnInit, OnDestroy {
     const line = turf.lineString(coords);
     const length = turf.length(line, { units: 'miles' });
     // 中间的参数为最后一个坐标点的经纬度
-    this.showMeasureInfo(length, e, 'length');
+    // this.showMeasureInfo(length, e, 'length');
   }
 
   // 面积测量
@@ -150,7 +170,7 @@ export class BoxmapComponent implements OnInit, OnDestroy {
     const area = turf.area(polygon);
     const center = turf.centerOfMass(polygon);
     // 中间的参数为面的中心点
-    this.showMeasureInfo(area, center, 'area');
+    // this.showMeasureInfo(area, center, 'area');
   }
 
   // 封闭图形坐标判断
@@ -190,10 +210,27 @@ export class BoxmapComponent implements OnInit, OnDestroy {
   // tslint:disable-next-line: typedef
   closeMeasure() {
     this.startMeasure = false;
+    this.startDraw = false;
     this.measureType = '';
     this.MeasureCoorDinates = [];
   }
 
+  // 移除popup
+  // tslint:disable-next-line: typedef
+  removePupupById(ids) {
+    if(ids.length > 0){
+      ids.forEach( element => {
+        // 有的ids并不包含popups窗体，所以需要加个判断防止出现该情况！
+        if(this.popups[element]){
+          this.popups[element].remove();
+          // TODO:(不能只是新增而不减少)移除指定元素！
+          delete this.popups[element];
+        }
+      });
+    }
+    // 最终设置ids的内容为空！
+    this.ids = [];
+  }
 
   // 销毁事件
   // tslint:disable-next-line: typedef
