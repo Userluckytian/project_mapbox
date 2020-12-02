@@ -16,7 +16,7 @@ export class DrawToolsComponent implements OnInit {
       title: '框选',
     },
     {
-      id: 'draw_circle',
+      id: 'drag_circle',
       title: '圆选',
     },
     {

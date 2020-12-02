@@ -53,8 +53,8 @@ export class BoxmapComponent implements OnInit, OnDestroy {
   }
 
   doDraw(e) {
-    this.draw.changeMode(e.id);
     this.startDraw = true;
+    this.draw.changeMode(e.id);
   }
 
   // tslint:disable-next-line: typedef

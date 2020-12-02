@@ -1,0 +1,17 @@
+@mixin max-size{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    @include max-size;
+    #olmap{
+        @include max-size;
+    }
+    .ol-draw{
+        position: absolute;
+        z-index: 999;
+        right: 20px;
+        top: 20px;
+    }
+}

@@ -1,0 +1,26 @@
+@mixin flexs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+$List: #ff0000, #00ff00, #0000ff, #dfaeaa ;
+
+@function double_width($width){
+    @return $width * 2;
+}
+
+.draw-tools{
+    @include flexs;
+    flex-direction: column;
+    :not(:last-child){
+        margin-bottom: double_width(5px);
+    }
+    .item{
+        background-color: nth($List, 4);
+        @include flexs;
+        span{
+            @include flexs;
+        }
+    }
+}
