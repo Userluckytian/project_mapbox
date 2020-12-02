@@ -33,6 +33,7 @@
     "lodash": "^4.17.20",
     "mapbox-gl-draw-circle": "^1.1.2",
     "mapbox-gl-draw-rectangle-mode": "^1.0.4",
+    "mapbox-gl-draw-rectangle-restrict-area": "^3.1.4",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9",
     "ng-zorro-antd": "^10.0.1",

@@ -46,15 +46,28 @@ export class BoxmapComponent implements OnInit, OnDestroy {
     });
   }
 
+  // tslint:disable-next-line: typedef
   Init() {
     this.draw = this.mapDrawtoolsService.getDrawTools();
     this.mapboxmap.addControl(this.draw, 'top-right');
     this.addListerDraw(this.mapboxmap);
   }
 
+  // tslint:disable-next-line: typedef
   doDraw(e) {
     this.startDraw = true;
-    this.draw.changeMode(e.id);
+    if (e.id === 'draw_rectangle') {
+      this.draw.changeMode(e.id, {
+        areaLimit: 5 * 1_000_000, // 5 km2, optional
+        escapeKeyStopsDrawing: true, // default true
+        allowCreateExceeded: false, // default false
+        exceedCallsOnEachMove: false, // default false
+        exceedCallback: (area) => console.log('exceeded!', area), // optional
+        areaChangedCallback: (area) => console.log('updated', area), // optional
+      });
+    } else {
+      this.draw.changeMode(e.id);
+    }
   }
 
   // tslint:disable-next-line: typedef
@@ -218,10 +231,10 @@ export class BoxmapComponent implements OnInit, OnDestroy {
   // 移除popup
   // tslint:disable-next-line: typedef
   removePupupById(ids) {
-    if(ids.length > 0){
-      ids.forEach( element => {
+    if (ids.length > 0) {
+      ids.forEach(element => {
         // 有的ids并不包含popups窗体，所以需要加个判断防止出现该情况！
-        if(this.popups[element]){
+        if (this.popups[element]) {
           this.popups[element].remove();
           // TODO:(不能只是新增而不减少)移除指定元素！
           delete this.popups[element];

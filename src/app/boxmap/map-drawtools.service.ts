@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import * as MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
 import { CircleMode, DragCircleMode, DirectMode, SimpleSelectMode } from 'mapbox-gl-draw-circle';
 
-import DrawRectangle from 'mapbox-gl-draw-rectangle-mode';
+// import DrawRectangle, { DrawStyles } from 'mapbox-gl-draw-rectangle-mode';  // 引入这个会报错（原因增加了）
+
+import DrawRectangle, { DrawStyles, } from 'mapbox-gl-draw-rectangle-restrict-area';
 
 
 
@@ -16,7 +18,9 @@ export class MapDrawtoolsService {
   // 获取绘制工具并执行绘制
   public getDrawTools(): MapboxDraw{
     this.draw = this.draw ? this.draw : new MapboxDraw({
+      userProperties: true,
       displayControlsDefault: false,
+      styles: DrawStyles,
       controls: {},
       modes: {
         ...MapboxDraw.modes,
@@ -29,6 +33,8 @@ export class MapDrawtoolsService {
     });
     return this.draw;
   }
+
+
 
   // 按照id：数组进行清空绘制;
   // tslint:disable-next-line: typedef
