@@ -3,9 +3,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyServiceService } from './my-service.service';
 import { CoreModule, StartupService, ResourceMetaInfoService, DefaultInterceptor } from '@cmss/core';
@@ -19,6 +17,11 @@ export function StartupServiceFactory(startupService: StartupService) {
 }
 
 
+// 日期
+import { registerLocaleData } from '@angular/common';
+import zh from '@angular/common/locales/zh';
+registerLocaleData(zh);
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ export function StartupServiceFactory(startupService: StartupService) {
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    ShareModule
+    ShareModule,
+    BrowserAnimationsModule
   ],
   providers: [
     MyServiceService,

@@ -14,6 +14,7 @@ import { LeftBottomComponent } from './components/left-bottom/left-bottom.compon
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OverviewRoutes } from './overview.routing';
+import { ShareModule } from '../share/share.module';
 
 
 
@@ -22,7 +23,8 @@ import { OverviewRoutes } from './overview.routing';
     CommonModule,
     FormsModule,
     HttpClientModule,
-    OverviewRoutes
+    OverviewRoutes,
+    ShareModule
   ],
   declarations: [
     OverviewComponent,
