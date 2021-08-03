@@ -24,14 +24,21 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/cesium/Build/Cesium",
+                "output": "./assets/cesium"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/cesium/Build/Cesium/Widgets/widgets.css",
               "src/styles.scss",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": [
+              "./node_modules/cesium/Build/Cesium/Cesium.js",
               "src/assets/libs/lodash.js",
               "src/assets/libs/postal.min.js",
               "node_modules/@cgcs2000/mapbox-gl/dist/mapbox-gl.js"
@@ -93,13 +100,21 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/cesium/Build/Cesium",
+                "output": "./assets/cesium"
+              },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/cesium/Build/Cesium/Widgets/widgets.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/cesium/Build/Cesium/Cesium.js"
+            ]
           }
         },
         "lint": {

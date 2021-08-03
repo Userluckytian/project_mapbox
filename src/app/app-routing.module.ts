@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'mapstatic',
     loadChildren: () => import('./mapstatic/mapstatic.module').then(m => m.MapstaticModule),
   },
+  {
+    path: 'cesium',
+    loadChildren: () => import('./cesium/cesium.module').then(m => m.CesiumModule),
+  }
 ];
 
 @NgModule({

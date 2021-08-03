@@ -20,6 +20,8 @@ export function StartupServiceFactory(startupService: StartupService) {
 // 日期
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { AngularCesiumModule } from 'angular-cesium';
+import { AngularCesiumWidgetsModule } from 'angular-cesium';
 registerLocaleData(zh);
 
 
@@ -33,7 +35,9 @@ registerLocaleData(zh);
     CoreModule,
     HttpClientModule,
     ShareModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularCesiumModule.forRoot(),
+    AngularCesiumWidgetsModule
   ],
   providers: [
     MyServiceService,

@@ -21,7 +21,12 @@ export class AppComponent {
   {
     route: 'mapstatic',
     outlet: 'boxmap'
-  }];
+  },
+  {
+    route: 'cesium',
+    outlet: 'boxmap'
+  }
+];
 
   constructor(private router: Router) { }
   // tslint:disable-next-line: typedef
